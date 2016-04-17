@@ -1,0 +1,85 @@
+{% load staticfiles %}
+
+<html>
+	<head>
+		<link rel="stylesheet" href="https://bootswatch.com/flatly/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src="{% static "my.js" %}"></script>
+		<link rel="stylesheet" href="{% static "my.css" %}">
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h1>Content/Emotion based Image Retrieval</h1>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-lg-2" id="RF">
+					Simulation = ?
+				</div>
+
+				<div class="col-lg-8">
+					<div class="col-lg-8">
+						<div class="panel panel-primary">
+							
+							<div class="panel-body" id="query-box">
+
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<a href="#" id="submit" class="btn btn-primary">
+							Submit
+						</a>
+					
+					
+						<a href="#" id="clear" class="btn btn-primary">
+							Clear
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				
+				{% static "" as base_url %}
+				{% for item in emoji_list %}
+					<div class="col-lg-1">
+					<img src="{{base_url}}icon/{{item}}" class="img-responsive emoji" alt="{{forloop.counter0}}">
+					</div>
+				{% endfor %}
+				
+			</div>
+			
+				<hr />
+			
+			<div class="row" id="result">
+				<div class="col-lg-2">
+					<img src="{% static "images/1.jpg" %}" class="img-responsive">
+				</div>
+				<div class="col-lg-2">
+					<img src="{% static "images/1.jpg" %}" class="img-responsive">
+				</div>
+				<div class="col-lg-2">
+					<img src="{% static "images/1.jpg" %}" class="img-responsive">
+				</div>
+				<div class="col-lg-2">
+					<img src="{% static "images/1.jpg" %}" class="img-responsive">
+				</div>
+				<div class="col-lg-2">
+					<img src="{% static "images/1.jpg" %}" class="img-responsive">
+				</div>
+				<div class="col-lg-2">
+					<img src="{% static "images/1.jpg" %}" class="img-responsive">
+				</div>
+				<div class="col-lg-2">
+					<img src="{% static "images/1.jpg" %}" class="img-responsive">
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

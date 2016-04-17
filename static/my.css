@@ -1,0 +1,43 @@
+.panel-body img
+{
+	height: 40px;
+	width: 40px;
+}
+
+.panel-body
+{
+	height: 65px;
+}
+
+.row
+{
+	margin-bottom: 5px;
+}
+
+h1
+{
+
+}
+.btn
+{
+	margin-top: 9px;
+	margin-right: 10px;
+}
+
+hr
+{
+	border-top: 1px solid #000000;
+	
+}
+
+#result img
+{
+	margin-bottom: 18px;
+	height: 110px;
+	width: 165px;
+}
+
+#query-box img
+{
+	height: 40px;
+}
